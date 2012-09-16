@@ -1,0 +1,34 @@
+" vim:set ft=vim:
+
+runtime bundles.conf
+runtime visual.conf
+runtime formatting.conf
+runtime mappings.conf
+
+" Miscellaneous
+" ------------------------------------------------------------------------------
+
+" don't want any of that
+set noswapfile
+set nobackup
+
+" case-insensitive search, unless a capital letter is used
+set ignorecase
+set smartcase
+
+" buffer gets set as hidden when unloaded
+set hidden
+
+" ignore DS_Store files
+set wildignore+=.DS_Store
+
+" autocomplete
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+" handle erb as html
+autocmd BufNewFile,BufRead *.erb set filetype=eruby.html
+
+" .snippet is a snippet
+autocmd BufNewFile,BufRead *.snippet set filetype=snippet
+

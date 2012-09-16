@@ -1,0 +1,19 @@
+[user]
+	name = Daniel Rose
+	email = dan@modiho.com
+[core]
+	editor = =
+	autocrlf = input
+	savecrlf = true
+  excludesfile = ~/.gitignore
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[github]
+	user = modiho
+	token = ddd99c4af19089ca29efb5471081cf49

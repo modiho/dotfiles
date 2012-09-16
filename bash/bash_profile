@@ -3,13 +3,11 @@
 
 source $DOTFILES/git/git-completion.bash
 
-alias cvi="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g --remote-silent'
 alias apachestart='sudo /usr/local/apache/bin/apachectl -k start -f /usr/local/apache/conf/httpd.conf'
 alias apachestop='sudo /usr/local/apache/bin/apachectl -k stop -f /usr/local/apache/conf/httpd.conf'
 alias canaryunsafe='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --allow-file-access-from-files &> /dev/null &'
 
-export GIT_EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim -f -g'
+export GIT_EDITOR='vim'
 export PATH=/usr/local/bin:$PATH:/opt/local/bin
 
 export LANG=de_DE.UTF-8

@@ -75,7 +75,6 @@ print_status_line_left() {
 			first_segment_left=0
 		fi
 	done
-	__ui_left "colour235" "colour235" "red" "$separator_right_bold" "$prev_bg"
 
 	# End in a clean state.
 	echo "#[default]"

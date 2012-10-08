@@ -18,9 +18,9 @@ segments_path="${cwd}/${segments_dir}"
 declare -A pwd
 pwd+=(["script"]="${segments_path}/pwd.sh")
 pwd+=(["foreground"]="colour211")
-pwd+=(["background"]="colour89")
+pwd+=(["background"]="colour233")
 pwd+=(["separator"]="${separator_left_bold}")
-#register_segment "pwd"
+# register_segment "pwd"
 
 declare -A now_playing
 if [ "$PLATFORM" == "linux" ]; then
@@ -34,15 +34,14 @@ elif [ "$PLATFORM" == "mac" ]; then
 	now_playing+=(["script"]="${segments_path}/np_spotify_mac.sh")
 fi
 if [[ ${now_playing["script"]} ]]; then
-	now_playing+=(["foreground"]="colour37")
-	now_playing+=(["background"]="colour234")
-	now_playing+=(["separator"]="${separator_left_bold}")
+	now_playing+=(["foreground"]="colour244")
+	now_playing+=(["background"]="colour233")
 	register_segment "now_playing"
 fi
 
 declare -A cpu
 cpu+=(["script"]="${segments_path}/cpu.sh")
-cpu+=(["foreground"]="colour136")
+cpu+=(["foreground"]="colour245")
 cpu+=(["background"]="colour240")
 cpu+=(["separator"]="${separator_left_bold}")
 #register_segment "cpu"
@@ -60,32 +59,30 @@ if [ "$PLATFORM" == "mac" ]; then
 else
 	battery+=(["script"]="${segments_path}/battery.sh")
 fi
-battery+=(["foreground"]="colour136")
-battery+=(["background"]="colour235")
-battery+=(["separator"]="${separator_left_bold}")
+battery+=(["foreground"]="colour245")
+battery+=(["background"]="colour233")
 register_segment "battery"
 
 declare -A date_day
 date_day+=(["script"]="${segments_path}/date_day.sh")
-date_day+=(["foreground"]="colour136")
-date_day+=(["background"]="colour235")
-date_day+=(["separator"]="${separator_left_bold}")
+date_day+=(["foreground"]="colour245")
+date_day+=(["background"]="colour233")
 register_segment "date_day"
 
 declare -A date_full
 date_full+=(["script"]="${segments_path}/date_full.sh")
-date_full+=(["foreground"]="colour136")
-date_full+=(["background"]="colour235")
+date_full+=(["foreground"]="colour245")
+date_full+=(["background"]="colour233")
 date_full+=(["separator"]="${separator_left_thin}")
-date_full+=(["separator_fg"]="default")
+date_full+=(["separator_fg"]="colour245")
 register_segment "date_full"
 
 declare -A time
 time+=(["script"]="${segments_path}/time.sh")
-time+=(["foreground"]="colour136")
-time+=(["background"]="colour235")
+time+=(["foreground"]="colour245")
+time+=(["background"]="colour233")
 time+=(["separator"]="${separator_left_thin}")
-time+=(["separator_fg"]="default")
+time+=(["separator_fg"]="colour245")
 register_segment "time"
 
 # Print the status line in the order of registration above.

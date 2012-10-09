@@ -32,9 +32,10 @@ register_segment "hostname"
 
 # declare -A lan_ip
 # lan_ip+=(["script"]="${segments_path}/lan_ip.sh")
-# lan_ip+=(["foreground"]="colour255")
-# lan_ip+=(["background"]="colour24")
-# lan_ip+=(["separator"]="${separator_right_bold}")
+# lan_ip+=(["foreground"]="colour245")
+# lan_ip+=(["background"]="colour233")
+# hostname+=(["separator"]="${separator_right_thin}")
+# hostname+=(["separator_fg"]="colour245")
 # register_segment "lan_ip"
 
 # declare -A wan_ip

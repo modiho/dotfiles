@@ -20,7 +20,7 @@ set smartcase
 set hidden
 
 " ignore DS_Store files
-set wildignore+=.DS_Store
+set wildignore+=.DS_Store,*/node_modules/*
 
 " autocomplete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags

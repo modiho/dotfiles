@@ -8,7 +8,7 @@ alias apachestop='sudo /usr/local/apache/bin/apachectl -k stop -f /usr/local/apa
 alias canaryunsafe='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --allow-file-access-from-files &> /dev/null &'
 
 export GIT_EDITOR='vim'
-export PATH=/usr/local/bin:$PATH:/opt/local/bin
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH:/opt/local/bin
 
 export LANG=de_DE.UTF-8
 

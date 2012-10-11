@@ -23,8 +23,12 @@ set hidden
 set wildignore+=.DS_Store,*/node_modules/*
 
 " autocomplete
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+if has("autocmd") && exists("+omnifunc")
+  autocmd Filetype *
+        \if &omnifunc == "" |
+        \setlocal omnifunc=syntaxcomplete#Complete |
+        \endif
+endif
 
 " handle erb as html
 autocmd BufNewFile,BufRead *.erb set filetype=eruby.html

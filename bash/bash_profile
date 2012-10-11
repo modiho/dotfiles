@@ -1,6 +1,8 @@
 # vim:set ft=conf:
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+bind '"\t":menu-complete'
+
 source $DOTFILES/git/git-completion.bash
 
 alias apachestart='sudo /usr/local/apache/bin/apachectl -k start -f /usr/local/apache/conf/httpd.conf'

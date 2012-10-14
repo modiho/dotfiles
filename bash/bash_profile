@@ -23,3 +23,11 @@ blue='\e[0;34m'
 PS1="\n$blue\u: $green\w $yellow\$(__git_ps1 '(%s)') \n$resetcolor> "
 # tmux-powerline needs that
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
+
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then 
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && ls
+}

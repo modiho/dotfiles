@@ -1,18 +1,25 @@
-# jasmine testing it
-snippet it
-it('${1}', function() {
-${2}
-});
-endsnippet
-
 # jasmine testing describe
 snippet describe
 describe('${1}', function() {
-${2}
+	${2}
 });
 endsnippet
 
 # jasmine testing expect
 snippet exp
 expect(${1}).to${2}(${3});
+endsnippet
+
+# amd require
+snippet require
+require(['${1}'], function(${2}) {
+	${3}
+});
+endsnippet
+
+# amd define
+snippet define
+define([${1}], function(${2}) {
+	${3}
+});
 endsnippet

@@ -10,16 +10,30 @@ snippet exp
 expect(${1}).to${2}(${3});
 endsnippet
 
-# amd require
-snippet require
-require(['${1}'], function(${2}) {
-	${3}
+snippet f "anonymous function" i
+function(${1}) {
+	${2}
+}${3}
+endsnippet
+
+snippet req "node require"
+require('${1}')${2};
+endsnippet
+
+snippet then "promises then" i
+then(function(${1}) {
+	${2}
 });
 endsnippet
 
-# amd define
-snippet define
-define([${1}], function(${2}) {
-	${3}
+snippet suite "mocha tdd interface suite"
+suite('${1}', function() {
+	${2}
+});
+endsnippet
+
+snippet test "mocha tdd interface test"
+test('${1}', function() {
+	${2}
 });
 endsnippet

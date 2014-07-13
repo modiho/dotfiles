@@ -1,0 +1,57 @@
+snippet defm
+defmodule ${1} do
+	@moduledoc """
+	${2}
+	"""
+
+	${3}
+end
+endsnippet
+
+snippet def
+@doc """
+"""
+def ${1} do
+	${2}
+end
+endsnippet
+
+snippet deft
+defmodule ${1} do
+	use ExUnit.Case
+
+	test "${2}" do
+		assert ${3}
+	end
+end
+endsnippet
+
+snippet test
+test "${1}" do
+	${2}
+end
+endsnippet
+
+snippet here
+"""
+${1}
+"""
+endsnippet
+
+snippet rec
+receive do
+	${1}
+end
+endsnippet
+
+snippet do
+do
+	${1}
+end
+endsnippet
+
+snippet fn
+fn ${1} ->
+	${2}
+end
+endsnippet

@@ -19,8 +19,8 @@ set smartcase
 " buffer gets set as hidden when unloaded
 set hidden
 
-" ignore DS_Store files
-set wildignore+=.DS_Store,*/node_modules/*
+" ignoring specific files
+set wildignore+=.DS_Store,*/node_modules/*,*/.idea/*
 
 " autocomplete
 if has("autocmd") && exists("+omnifunc")
@@ -30,8 +30,10 @@ if has("autocmd") && exists("+omnifunc")
         \endif
 endif
 
-" handle erb as html
+" handle some files as html
 autocmd BufNewFile,BufRead *.erb set filetype=eruby.html
+autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewFile,BufRead *.mustache set filetype=html.mustache
 
 " .snippet is a snippet
 autocmd BufNewFile,BufRead *.snippet set filetype=snippet

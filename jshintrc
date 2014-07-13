@@ -1,8 +1,9 @@
 {
-    "es5": true,
     "multistr": true,
     "eqeqeq": true,
     "quotmark": true,
     "trailing": true,
-    "expr": true
+    "expr": true,
+    "esnext": true,
+    "newcap": false
 }

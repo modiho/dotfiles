@@ -8,12 +8,17 @@
   excludesfile = ~/.gitignore
 [alias]
   co = checkout
-  ci = commit
+  ci = commit -m
   st = status
   br = branch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+  aa = add --all
+[color]
+  ui = true
 [github]
 	user = modiho
 	token = ddd99c4af19089ca29efb5471081cf49
+[push]
+	default = simple

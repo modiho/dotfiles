@@ -1,5 +1,5 @@
 # vim:set ft=conf:
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+source $HOME/.rvm/scripts/rvm
 
 bind '"\t":menu-complete'
 
@@ -8,25 +8,34 @@ source $DOTFILES/git/git-completion.bash
 alias apachestart='sudo /usr/local/apache/bin/apachectl -k start -f /usr/local/apache/conf/httpd.conf'
 alias apachestop='sudo /usr/local/apache/bin/apachectl -k stop -f /usr/local/apache/conf/httpd.conf'
 alias canaryunsafe='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --allow-file-access-from-files &> /dev/null &'
+alias npmi='npm --registry http://registry.npmjs.eu/ install'
+
+export HISTSIZE=15000
 
 export GIT_EDITOR='vim'
-export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH:/opt/local/bin
+export EDITOR='vim'
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/php/bin:/usr/local/share/npm/bin:/usr/local/git/bin:$PATH:/opt/local/bin:"
 
 export LANG=de_DE.UTF-8
 
 export PLATFORM='mac'
+
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
+
+# Oracle instant client config
+export NLS_LANG="American_America.UTF8"
+# export DYLD_LIBRARY_PATH="/usr/local/instantclient_11_2"
 
 green="\[\033[0;32m\]"
 yellow='\e[0;33m'
 resetcolor="\[\033[0m\]"
 blue='\e[0;34m'
 PS1="\n$blue\u: $green\w $yellow\$(__git_ps1 '(%s)') \n$resetcolor> "
-# tmux-powerline needs that
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
 
+# shows directory contents after cd
 function cd() {
     new_directory="$*";
-    if [ $# -eq 0 ]; then 
+    if [ $# -eq 0 ]; then
         new_directory=${HOME};
     fi;
     builtin cd "${new_directory}" && ls

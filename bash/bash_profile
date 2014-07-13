@@ -9,6 +9,7 @@ alias apachestart='sudo /usr/local/apache/bin/apachectl -k start -f /usr/local/a
 alias apachestop='sudo /usr/local/apache/bin/apachectl -k stop -f /usr/local/apache/conf/httpd.conf'
 alias canaryunsafe='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --allow-file-access-from-files &> /dev/null &'
 alias npmi='npm --registry http://registry.npmjs.eu/ install'
+alias ta='tmux attach -t'
 
 export HISTSIZE=15000
 

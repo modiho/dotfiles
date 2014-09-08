@@ -8,6 +8,10 @@ runtime mappings.conf
 " Miscellaneous
 " ------------------------------------------------------------------------------
 
+
+" allow backspacing over autoindent, end of line and start of insertion
+set backspace=2
+
 " don't want any of that
 set noswapfile
 set nobackup
